@@ -48,4 +48,44 @@ const user = {
 };
 // Type Assertion
 let cid = 1;
+//let customerId = <number>cid
 let customerId = cid;
+//Functions
+function addNum(x, y) {
+    return x + y;
+}
+function log(message) {
+    console.log(message);
+}
+const user1 = {
+    id: 1,
+    name: 'John'
+};
+const add = (x, y) => x + y;
+// Classes
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.name} is now registered`;
+    }
+}
+const brad = new Person(1, 'Brad Traversy');
+const mike = new Person(69, 'Waltuh');
+// Subclass
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(3, "Shawn", "Developer");
+// Generics
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3, 4]);
+let strArray = getArray(["Brad", "John", "Jill"]);
+numArray.push();
